@@ -22,8 +22,6 @@ r.addRoute('', function () {
 	console.log('I am your favorite route');
 });
 
-
-
 r.find('blog/view/6'); //Viewing blog with id: 6
 r.find('blog/edit/6'); //Editing blog with id: 6
 r.find('user/delete/7'); // Doing delete with user that has id: 7
