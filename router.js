@@ -6,17 +6,13 @@ var Router = function () {
 
 Router.prototype.addRoute = function (route, func) {
 
-	var parts       = route.split('/');
 	var ident       = route.split('/:')[0] || route;
-
-	var routeObject = {
+	this._routes.push({
 		ident: ident,
 		func: func,
-		parts: parts.length,
+		parts: route.split('/').length,
 		parmsFrom: ident.split('/').length
-	};
-
-	this._routes.push(routeObject);
+	});
 
 }
 
